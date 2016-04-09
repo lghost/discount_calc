@@ -1,20 +1,33 @@
 fieldset {
-  width: 500px;
 }
 
 legend {
   font-size: 20px;
 }
 
-label.field {
-  text-align: left;
-  width: 100px;
-  float: left;
+label {
   font-weight: bold;
 }
 
-fieldset p {
-  clear: both;
+div.form-column {
+  float:left;
   padding: 5px;
-  display: block;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 5px;
+}
+
+tr:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+
+tr:nth-child(1) {
+  background-color: #c0c0c0;
 }

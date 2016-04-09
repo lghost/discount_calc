@@ -6,24 +6,52 @@
     <script type="text/javascript" src="js/calc.js"></script>
     <link rel="stylesheet" href="css/style.css">
   </head>
+  <body>
     <form onsubmit="return false;">
       <fieldset>
         <legend>Добавить продукт</legend>
-
-        <p>
-          <label class="field" for="productName">Продукт</label>
-          <input type="text" name="productName">
-        </p>
-
-        <p>
-          <label class="field" for="price">Цена</label>
-          <input type="text" name="price">
-        </p>
-
-        <input type="submit" value="Submit">
+        <div class="form-column">
+          <label for="productName">Продукт</label><br />
+          <input type="text" name="productName" size="20" />
+        </div>
+        <div class="form-column">
+          <label for="price">Цена</label><br />
+          <input type="text" name="price" size="10" />
+        </div>
+        <div class="form-column">
+          <br />
+          <input type="submit" value="Добавить">
+        </div>
       </fieldset>
-    </form> 
     </form>
-  <body>
+
+    <hr />
+
+    <div>
+      <table>
+        <tr>
+          <th style="width: 200px">Продукт</th>
+          <th style="width: 100px">Цена</th>
+          <th style="width: 200px">Цена со скидкой</th>
+        </tr>
+        <tr>
+          <td>lol</td>
+          <td>lol</td>
+          <td>lol</td>
+        </tr>
+        <tr>
+          <td>lol</td>
+          <td>lol</td>
+          <td>lol</td>
+        </tr>
+        <tr>
+          <td>lol</td>
+          <td>lol</td>
+          <td>lol</td>
+        </tr>
+      </table>
+
+      <!-- Применить скидку <button>Применить</button> -->
+    </div>
   </body>
 </html>
