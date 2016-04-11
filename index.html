@@ -9,43 +9,45 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div>
-      <form onsubmit="addProduct(this); return false;">
-        <fieldset>
-          <legend>Добавить продукт</legend>
-          <div class="form-column">
-            <label for="productName">Продукт</label><br />
-            <input type="text" name="productName" size="15" />
-          </div>
-          <div class="form-column">
-            <label for="price">Цена</label><br />
-            <input type="text" name="price" size="5" />
-          </div>
-          <div class="form-column">
-            <br />
-            <input type="submit" value="Добавить">
-          </div>
-        </fieldset> 
-      </form>
-    </div>
-    <hr />
-    <div>
-      <p class="subtitle">Корзина</p>
-      <table id="products">
-        <tr>
-          <th class="width40p">Продукт</th>
-          <th class="width20p">Цена</th>
-          <th class="width40p">Цена со скидкой</th>
-        </tr>
-      </table>
-      <p>
-        <form onsubmit="setDiscount(this); return false;">
-          Применить скидку
-          <input type="text" name="discount" size="2" value="0" />
-          рублей
-          <input type="submit" value="Применить">
+    <div id="main">
+      <div>
+        <form onsubmit="addProduct(this); return false;">
+          <fieldset>
+            <legend>Добавить продукт</legend>
+            <div class="form-column">
+              <label for="productName">Продукт</label><br />
+              <input type="text" name="productName" size="15" />
+            </div>
+            <div class="form-column">
+              <label for="price">Цена</label><br />
+              <input type="text" name="price" size="5" />
+            </div>
+            <div class="form-column">
+              <br />
+              <input type="submit" value="Добавить">
+            </div>
+          </fieldset> 
         </form>
-      </p>
+      </div>
+      <hr />
+      <div>
+        <p class="subtitle">Корзина</p>
+        <table id="products">
+          <tr>
+            <th class="width40p">Продукт</th>
+            <th class="width20p">Цена</th>
+            <th class="width40p">Цена со скидкой</th>
+          </tr>
+        </table>
+        <p>
+          <form onsubmit="setDiscount(this); return false;">
+            Применить скидку
+            <input type="text" name="discount" size="2" value="0" />
+            рублей
+            <input type="submit" value="Применить">
+          </form>
+        </p>
+      </div>
     </div>
   </body>
 </html>
