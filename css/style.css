@@ -1,4 +1,6 @@
 fieldset {
+  margin-left: 0px;
+  margin-right: -1px;
 }
 
 legend {
@@ -10,8 +12,12 @@ label {
 }
 
 div.form-column {
-  float:left;
+  float: left;
   padding: 5px;
+}
+
+table {
+  width: 100%;
 }
 
 table, th, td {
@@ -30,4 +36,13 @@ tr:nth-child(odd) {
 
 tr:nth-child(1) {
   background-color: #c0c0c0;
+}
+
+hr {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 20px;
 }
