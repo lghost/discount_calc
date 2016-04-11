@@ -16,6 +16,19 @@ div.form-column {
   padding: 5px;
 }
 
+
+
+hr {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+p.subtitle {
+  font-size: 20px;
+}
+
+
+
 table {
   width: 100%;
 }
@@ -38,11 +51,10 @@ tr:nth-child(1) {
   background-color: #c0c0c0;
 }
 
-hr {
-  margin-top: 30px;
-  margin-bottom: 30px;
+.width40p {
+  width: 40%;
 }
 
-p {
-  font-size: 20px;
+.width20p {
+  width: 20%;
 }

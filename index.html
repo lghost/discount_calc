@@ -3,58 +3,49 @@
   <head>
     <meta charset="utf-8">
     <title>Калькулятор скидок</title>
-    <script type="text/javascript" src="js/calc.js"></script>
+    <script type="text/javascript" src="js/model.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
+    <script type="text/javascript" src="js/helper.js"></script>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <div>
-      <form onsubmit="return false;">
+      <form onsubmit="addProduct(this); return false;">
         <fieldset>
           <legend>Добавить продукт</legend>
           <div class="form-column">
             <label for="productName">Продукт</label><br />
-            <input type="text" name="productName" size="20" />
+            <input type="text" name="productName" size="15" />
           </div>
           <div class="form-column">
             <label for="price">Цена</label><br />
-            <input type="text" name="price" size="10" />
+            <input type="text" name="price" size="5" />
           </div>
           <div class="form-column">
             <br />
             <input type="submit" value="Добавить">
           </div>
-        </fieldset>
+        </fieldset> 
       </form>
     </div>
-
     <hr />
-
     <div>
-      <p>Корзина</p>
-      <table>
+      <p class="subtitle">Корзина</p>
+      <table id="products">
         <tr>
-          <th style="width: 40%">Продукт</th>
-          <th style="width: 20%">Цена</th>
-          <th style="width: 40%">Цена со скидкой</th>
-        </tr>
-        <tr>
-          <td>lol</td>
-          <td>lol</td>
-          <td>lol</td>
-        </tr>
-        <tr>
-          <td>lol</td>
-          <td>lol</td>
-          <td>lol</td>
-        </tr>
-        <tr>
-          <td>lol</td>
-          <td>lol</td>
-          <td>lol</td>
+          <th class="width40p">Продукт</th>
+          <th class="width20p">Цена</th>
+          <th class="width40p">Цена со скидкой</th>
         </tr>
       </table>
-
-      <!-- Применить скидку <button>Применить</button> -->
+      <p>
+        <form onsubmit="setDiscount(this); return false;">
+          Применить скидку
+          <input type="text" name="discount" size="2" value="0" />
+          рублей
+          <input type="submit" value="Применить">
+        </form>
+      </p>
     </div>
   </body>
 </html>
