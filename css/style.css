@@ -11,6 +11,11 @@ body {
   background-color: white;
 }
 
+#main-label {
+  font-size: 30px;
+  text-align: center;
+}
+
 fieldset {
   margin-left: 0px;
   margin-right: -1px;

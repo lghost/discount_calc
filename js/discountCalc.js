@@ -2,8 +2,12 @@ angular.module('discountCalc', [])
   .controller('CalcController', function() {
     var cc = this;
 
-    cc.products = [{name: 'test', price: 100, discountPrice: 90}];
-    cc.totalDiscount = 0;
+    cc.products = [
+      {name: 'Телефон',    price: 100},
+      {name: 'Магнитофон', price: 200},
+      {name: 'Миелофон',   price: 400},
+    ];
+    cc.totalDiscount = 7;
 
     cc.addProduct = function() {
       cc.products.push({
@@ -20,7 +24,8 @@ angular.module('discountCalc', [])
     };
 
     cc.applyDiscountTo = function(product, discount) {
-      //cc.applyDiscount();
+      product.discount = discount;
+      product.discountPrice = product.price - product.discount;
     };
 
     cc.applyDiscount = function() {
@@ -42,9 +47,13 @@ angular.module('discountCalc', [])
         discountRem -= discount;
       });
 
-      // I wish to sort products to get the most expensive product
-      cc.applyDiscountTo(cc.products.sort(function (p1, p2) {
-        return p2.price - p1.price;
-      })[0], cc.products[0].discount + discountRem);
+      // The most expensive product
+      var leadProduct = cc.products.reduce(function(lead, current) {
+        return lead ? lead.price > current.price ? lead : current : current;
+      });
+
+      cc.applyDiscountTo(leadProduct, leadProduct.discount + discountRem);
     };
+
+    cc.applyDiscount();
   });
