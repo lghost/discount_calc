@@ -45,14 +45,14 @@
             <td >{{product.discountPrice}}</td>
           </tr>
         </table>
-        <p>
+        <div id="discount-form">
           <form ng-submit="cc.changeDiscount()">
             Применить скидку
             <input ng-model="cc.totalDiscount" type="text" name="discount" size="2" value="0" />
             рублей
-            <input type="submit" value="Применить">
+            <input type="submit" value="Применить" />
           </form>
-        </p>
+        </div>
       </div>
     </div>
   </body>

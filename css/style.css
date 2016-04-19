@@ -76,3 +76,7 @@ tr:nth-child(1) {
 .width20p {
   width: 20%;
 }
+
+div#discount-form {
+  margin: 16px 0px;
+}
